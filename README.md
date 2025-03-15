@@ -1,0 +1,4 @@
+- Start from a general Ubuntu VM
+- Install `ansible` and `git` packages
+- Clone this repository
+- Run the `main.yml` playbook against local system
