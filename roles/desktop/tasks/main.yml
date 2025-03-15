@@ -1,0 +1,6 @@
+- name: "Install desktop packages"
+  ansible.builtin.apt:
+    name: "ubuntu-desktop"
+    state: "latest"
+  tags:
+    - "desktop"

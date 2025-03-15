@@ -1,0 +1,5 @@
+- name: "Update repository cache"
+  ansible.builtin.shell: "apt-get update"
+  tags:
+    - "aptupdate"
+

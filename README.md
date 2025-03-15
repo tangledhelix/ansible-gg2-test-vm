@@ -1,4 +1,7 @@
 - Start from a general Ubuntu VM
-- Install `ansible` and `git` packages
+- Install `ansible`
+    - `sudo apt-get update`
+    - `sudo apt-get install -y ansible`
 - Clone this repository
 - Run the `main.yml` playbook against local system
+    - `sudo ansible-playbook main.yml`

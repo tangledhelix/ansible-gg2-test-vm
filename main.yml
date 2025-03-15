@@ -1,4 +1,7 @@
 ---
 - hosts: "all"
   roles:
-    - "tbd"
+    - "aptupdate"
+    - "desktop"
+    - "apt"
+    - "pip"
