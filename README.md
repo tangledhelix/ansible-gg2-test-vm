@@ -3,5 +3,6 @@
     - `sudo apt-get update`
     - `sudo apt-get install -y ansible`
 - Clone this repository
-- Run the `main.yml` playbook against local system
-    - `sudo ansible-playbook main.yml`
+- Run the `main.yml` playbook against local system. Easiest as root user.
+    - `sudo -s`
+    - `ansible-playbook main.yml`

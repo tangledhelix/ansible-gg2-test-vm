@@ -3,6 +3,8 @@
     name: "{{item}}"
     state: "latest"
   with_items:
-    - "pipenv"
+    - "python3-pip"
+    - "python3-poetry"
+    - "python3-tk"
   tags:
     - "apt"
