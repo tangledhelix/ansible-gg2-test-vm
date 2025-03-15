@@ -1,8 +1,0 @@
-- name: "Install Python packages"
-  ansible.builtin.pip:
-    name: "{{item}}"
-    state: "latest"
-  with_items:
-    - "pipenv"
-  tags:
-    - "pip"
