@@ -7,5 +7,6 @@
     - "python3-poetry"
     - "python3-tk"
     - "pipenv"
+    - "idle-python3.12"
   tags:
     - "apt"
