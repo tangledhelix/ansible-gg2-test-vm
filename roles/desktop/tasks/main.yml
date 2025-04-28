@@ -11,3 +11,15 @@
     cmd: "gsettings set org.gnome.desktop.screensaver lock-enabled false"
   tags:
     - "desktop"
+
+- name: "Enable automatic login"
+  ansible.builtin.shell:
+    cmd: "sed -i -e 's/^#.*\(AutomaticLoginEnable = true\)/\1/' custom.conf"
+  tags:
+    - "desktop"
+
+- name: "Set automatic login user"
+  ansible.builtin.shell:
+    cmd: "sed -i -e 's/^#.*\(AutomaticLogin =\) user1/\1 ubuntu/' custom.conf"
+  tags:
+    - "desktop"
