@@ -14,14 +14,14 @@
 
 - name: "Enable automatic login"
   ansible.builtin.shell:
-    cmd: "sed -i -e 's/^#.*\(AutomaticLoginEnable = true\)/\1/' custom.conf"
+    cmd: "sed -i -e 's/^#.*\\(AutomaticLoginEnable = true\\)/\\1/' custom.conf"
   become: true
   tags:
     - "desktop"
 
 - name: "Set automatic login user"
   ansible.builtin.shell:
-    cmd: "sed -i -e 's/^#.*\(AutomaticLogin =\) user1/\1 ubuntu/' custom.conf"
+    cmd: "sed -i -e 's/^#.*\\(AutomaticLogin =\\) user1/\\1 ubuntu/' custom.conf"
   become: true
   tags:
     - "desktop"
