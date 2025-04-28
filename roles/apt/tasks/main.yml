@@ -8,5 +8,9 @@
     - "python3-tk"
     - "pipenv"
     - "idle-python3.12"
+    - "neovim"
+    - "ripgrep"
+    - "nodejs"
+    - "tree-sitter-cli"
   tags:
     - "apt"
