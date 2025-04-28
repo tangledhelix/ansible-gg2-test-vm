@@ -1,0 +1,8 @@
+- name: "Git clone guiguts"
+  ansible.builtin.git:
+    repo: "https://github.com/DistributedProofreaders/guiguts-py.git"
+    dest: "/home/ubuntu/guiguts-py"
+    clone: true
+    update: true
+  tags:
+    - "guiguts"
