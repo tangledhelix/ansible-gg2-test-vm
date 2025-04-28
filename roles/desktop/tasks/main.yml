@@ -4,3 +4,9 @@
     state: "latest"
   tags:
     - "desktop"
+
+- name: "Disable screen lock"
+  ansible.builtin.shell:
+    cmd: "gsettings set org.gnome.desktop.screensaver lock-enabled false"
+  tags:
+    - "desktop"
