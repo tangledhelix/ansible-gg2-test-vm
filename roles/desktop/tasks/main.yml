@@ -12,6 +12,12 @@
   tags:
     - "desktop"
 
+- name: "Enable natural scroll"
+  ansible.builtin.shell:
+    cmd: "gsettings set org.gnome.desktop.peripherals.mouse natural-scroll true"
+  tags:
+    - "desktop"
+
 - name: "Enable automatic login"
   ansible.builtin.shell:
     cmd: "sed -i -e 's/^#.*\\(AutomaticLoginEnable = true\\)/\\1/' /etc/gdm3/custom.conf"
