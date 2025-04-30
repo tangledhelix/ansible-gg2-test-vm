@@ -12,6 +12,12 @@
   tags:
     - "desktop"
 
+- name: "Disable screen blank"
+  ansible.builtin.shell:
+    cmd: "gsettings set org.gnome.desktop.session idle-delay 0"
+  tags:
+    - "desktop"
+
 - name: "Enable natural scroll"
   ansible.builtin.shell:
     cmd: "gsettings set org.gnome.desktop.peripherals.mouse natural-scroll true"
