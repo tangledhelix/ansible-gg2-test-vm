@@ -39,3 +39,10 @@
     creates: "/home/ubuntu/perl5"
   tags:
     - "guiguts"
+
+- name: "Install CPAN modules for GG1"
+  ansible.builtin.shell:
+    cmd: "eval $(perl -I$HOME/perl5/lib -Mlocal::lib) && perl install_cpan_modules.pl"
+    chdir: "/home/ubuntu/guiguts"
+  tags:
+    - "guiguts"
