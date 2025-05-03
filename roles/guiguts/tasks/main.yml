@@ -54,3 +54,11 @@
     chdir: "/home/ubuntu/guiguts/src"
   tags:
     - "guiguts"
+
+- name: "Guiguts startup script"
+  ansible.builtin.copy:
+    dest: "/home/ubuntu/guiguts.sh"
+    content: "#!/bin/bash\neval $(perl -I$HOME/perl5/lib -Mlocal::lib)\nperl /home/ubuntu/guiguts/src/guiguts.pl &"
+    mode: "0755"
+  tags:
+    - "guiguts"
