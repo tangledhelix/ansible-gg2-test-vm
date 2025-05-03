@@ -65,6 +65,15 @@
   ansible.builtin.copy:
     dest: "/home/ubuntu/dotfiles/inventory/hosts"
     content: "[all]\nlocalhost ansible_connection=local\n[local]\nlocalhost ansible_connection=local"
+  tags:
+    - "desktop"
+
+- name: "dotfiles gituser.yml"
+  ansible.builtin.copy:
+    dest: "/home/ubuntu/dotfiles/vars/gituser.yml"
+    content: '"gituser_name": "Dan Lowe"\n"gituser_email": "dan@tangledhelix.com"'
+  tags:
+    - "desktop"
 
 - name: "Install dotfiles"
   ansible.builtin.shell:
