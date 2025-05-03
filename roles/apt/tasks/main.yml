@@ -1,4 +1,4 @@
-- name: "Install packages"
+- name: "Install packages for GG2"
   ansible.builtin.apt:
     name: "{{item}}"
     state: "latest"
@@ -11,3 +11,14 @@
   become: true
   tags:
     - "apt"
+
+- name: "Install packages for GG1"
+  ansible.builtin.apt:
+    name: "{{item}}"
+    state: "{{latest}}"
+  with_items:
+    - "perl-base"
+    - "cpanminus"
+    - "libx11-dev"
+    - "zlib1g-dev"
+    - "gcc"

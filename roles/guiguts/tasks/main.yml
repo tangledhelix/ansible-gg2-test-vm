@@ -1,4 +1,4 @@
-- name: "Git clone guiguts"
+- name: "Git clone guiguts-py"
   ansible.builtin.git:
     repo: "https://github.com/DistributedProofreaders/guiguts-py.git"
     dest: "/home/ubuntu/guiguts-py"
@@ -7,7 +7,7 @@
   tags:
     - "guiguts"
 
-- name: "Git remote windymilla"
+- name: "guiguts-py remote windymilla"
   ansible.builtin.shell:
     cmd: "git remote add windymilla https://github.com/windymilla/guiguts-py.git"
     chdir: "/home/ubuntu/guiguts-py"
@@ -15,10 +15,19 @@
   tags:
     - "guiguts"
 
-- name: "Git remote tangledhelix"
+- name: "guiguts-py remote tangledhelix"
   ansible.builtin.shell:
     cmd: "git remote add tangledhelix https://github.com/tangledhelix/guiguts-py.git"
     chdir: "/home/ubuntu/guiguts-py"
     creates: "/home/ubuntu/guiguts-py/.git/refs/remotes/tangledhelix"
+  tags:
+    - "guiguts"
+
+- name: "Git clone guiguts"
+  ansible.builtin.git:
+    repo: "https://github.com/DistributedProofreaders/guiguts.git"
+    dest: "/home/ubuntu/guiguts"
+    clone: true
+    update: true
   tags:
     - "guiguts"
