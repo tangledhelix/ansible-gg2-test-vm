@@ -51,6 +51,6 @@
 - name: "Install CPAN modules for GG1"
   ansible.builtin.shell:
     cmd: "/home/ubuntu/gg1-cpan-installer"
-    chdir: "/home/ubuntu/guiguts"
+    chdir: "/home/ubuntu/guiguts/src"
   tags:
     - "guiguts"
