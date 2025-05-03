@@ -15,7 +15,7 @@
 - name: "Install packages for GG1"
   ansible.builtin.apt:
     name: "{{item}}"
-    state: "{{latest}}"
+    state: "latest"
   with_items:
     - "perl-base"
     - "cpanminus"
