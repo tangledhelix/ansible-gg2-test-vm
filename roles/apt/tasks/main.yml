@@ -22,3 +22,6 @@
     - "libx11-dev"
     - "zlib1g-dev"
     - "gcc"
+  become: true
+  tags:
+    - "apt"
