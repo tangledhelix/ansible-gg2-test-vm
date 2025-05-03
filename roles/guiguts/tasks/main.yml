@@ -42,7 +42,7 @@
 
 - name: "installer script for CPAN modules"
   ansible.builtin.copy:
-    path: "/home/ubuntu/gg1-cpan-installer"
+    dest: "/home/ubuntu/gg1-cpan-installer"
     content: "#!/bin/sh\neval $(perl -I$HOME/perl5/lib -Mlocal::lib)\nperl install_cpan_modules.pl"
     mode: "0755"
   tags:
