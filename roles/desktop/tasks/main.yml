@@ -54,6 +54,18 @@
   tags:
     - "desktop"
 
+- name: "dotfiles inventory"
+  ansible.builtin.file:
+    path: "/home/ubuntu/dotfiles/inventory"
+    state: "directory"
+  tags:
+    - "desktop"
+
+- name: "dotfiles inventory/hosts"
+  ansible.builtin.copy:
+    dest: "/home/ubuntu/dotfiles/inventory/hosts"
+    content: "[all]\nlocalhost ansible_connection=local\n[local]\nlocalhost ansible_connection=local"
+
 - name: "Install dotfiles"
   ansible.builtin.shell:
     cmd: "ansible-playbook -l localhost main.yml"
