@@ -44,3 +44,19 @@
   become: true
   tags:
     - "desktop"
+
+- name: "Git clone dotfiles"
+  ansible.builtin.git:
+    repo: "https://github.com/tangledhelix/dotfiles.git"
+    dest: "/home/ubuntu/dotfiles"
+    clone: true
+    update: true
+  tags:
+    - "desktop"
+
+- name: "Install dotfiles"
+  ansible.builtin.shell:
+    cmd: "ansible-playbook -l localhost main.yml"
+    chdir: "/home/ubuntu/dotfiles"
+  tags:
+    - "desktop"
