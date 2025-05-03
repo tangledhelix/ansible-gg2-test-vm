@@ -9,7 +9,7 @@
 
 - name: "guiguts-py remote windymilla"
   ansible.builtin.shell:
-    cmd: "git remote add windymilla https://github.com/windymilla/guiguts-py.git"
+    cmd: "git remote add -f windymilla https://github.com/windymilla/guiguts-py.git"
     chdir: "/home/ubuntu/guiguts-py"
     creates: "/home/ubuntu/guiguts-py/.git/refs/remotes/windymilla"
   tags:
@@ -17,7 +17,7 @@
 
 - name: "guiguts-py remote tangledhelix"
   ansible.builtin.shell:
-    cmd: "git remote add tangledhelix https://github.com/tangledhelix/guiguts-py.git"
+    cmd: "git remote add -f tangledhelix https://github.com/tangledhelix/guiguts-py.git"
     chdir: "/home/ubuntu/guiguts-py"
     creates: "/home/ubuntu/guiguts-py/.git/refs/remotes/tangledhelix"
   tags:
