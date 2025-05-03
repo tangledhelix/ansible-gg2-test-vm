@@ -37,3 +37,10 @@
   become: true
   tags:
     - "desktop"
+
+- name: "Set login shell"
+  ansible.builtin.shell:
+    cmd: "chsh -s /bin/zsh ubuntu"
+  become: true
+  tags:
+    - "desktop"

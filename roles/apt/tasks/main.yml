@@ -1,3 +1,13 @@
+- name: "Install general packages"
+  ansible.builtin.apt:
+    name: "{{item}}"
+    state: "latest"
+  with_items:
+    - "zsh"
+  become: true
+  tags:
+    - "apt"
+
 - name: "Install packages for GG2"
   ansible.builtin.apt:
     name: "{{item}}"
