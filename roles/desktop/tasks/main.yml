@@ -71,7 +71,7 @@
 - name: "dotfiles gituser.yml"
   ansible.builtin.copy:
     dest: "/home/ubuntu/dotfiles/vars/gituser.yml"
-    content: '"gituser_name": "Dan Lowe"\n"gituser_email": "dan@tangledhelix.com"'
+    content: "\"gituser_name\": \"Dan Lowe\"\n\"gituser_email\": \"dan@tangledhelix.com\""
   tags:
     - "desktop"
 
