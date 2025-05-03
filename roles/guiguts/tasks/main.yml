@@ -31,3 +31,11 @@
     update: true
   tags:
     - "guiguts"
+
+- name: "Perl local::lib for GG1"
+  ansible.builtin.shell:
+    cmd: "cpanm local::lib"
+    chdir: "/home/ubuntu"
+    creates: "/home/ubuntu/perl5"
+  tags:
+    - "guiguts"
